@@ -33,12 +33,6 @@ Consumer key를 이용하여 js파일을 호출하세요.
 <script src="http://platform.twitter.com/anywhere.js?id=I8q78RJMIrYowZwqtyIpw&v=1"></script>
 
 <script type="text/javascript">
-  twttr.anywhere(function (T) {
-    T.hovercards();
-  });
-</script>
-
-<script type="text/javascript">
 window.addEventListener("load", init, false);
 
 function init(){
@@ -51,10 +45,7 @@ function init(){
 	
 	twttr.anywhere(function(T){
 
-		if(T.isConnected()){
-			screenName = T.currentUser.data('screen_name');
-			profile = T.currentUser.data('profile_image_url')
-		}
+	
 		
 		//트위터에 로그인
 		document.querySelector("#btnLogin").onclick = function(){
